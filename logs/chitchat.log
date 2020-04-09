@@ -1,1 +1,3 @@
 ERROR 2020/04/07 14:55:39 helper.go:71: sql: no rows in result set Cannot find user
+ERROR 2020/04/09 00:26:13 helper.go:71: sql: no rows in result set Cannot find user
+ERROR 2020/04/09 00:26:19 helper.go:71: sql: no rows in result set Cannot find user
