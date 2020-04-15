@@ -1,0 +1,13 @@
+{{ define "content" }}
+
+	<form role="form" action="/thread/create" method="post">
+		<div class="lead">创建如下主题群组</div>
+		<div class="form-group">
+			<textarea class="form-control" name="topic" id="topic" placeholder="Thread topic here" rows="4"></textarea>
+			<br/>
+			<br/>
+			<button class="btn btn-lg btn-primary pull-right" type="submit">立即创建</button>
+		</div>
+	</form>
+
+{{ end }}

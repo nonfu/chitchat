@@ -1,0 +1,20 @@
+{{ define "content" }}
+	<p class="lead">
+		<a href="/thread/new">创建新群组</a> 或者加入下列群组!
+	</p>
+
+    {{ range . }}
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				<span class="lead"> <i class="fa fa-comment-o"></i> {{ .Topic }}</span>
+			</div>
+			<div class="panel-body">
+				由 {{ .User.Name }} 创建于 {{ .CreatedAt | fdate }} - 已有 {{ .NumReplies }} 个主题。
+				<div class="pull-right">
+					<a href="/thread/read?id={{.Uuid }}">阅读更多</a>
+				</div>
+			</div>
+		</div>
+    {{ end }}
+
+{{ end }}

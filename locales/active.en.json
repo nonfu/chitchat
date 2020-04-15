@@ -1,0 +1,6 @@
+{
+  "thread_not_found": {
+    "description": "Thread not exists in db",
+    "other": "Cannot read thread"
+  }
+}
