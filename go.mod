@@ -8,6 +8,5 @@ require (
 	github.com/gorilla/mux v1.7.4
 	github.com/nicksnyder/go-i18n/v2 v2.0.3
 	golang.org/x/text v0.3.2
-	golang.org/x/tools v0.0.0-20200413015812-1f08ef6002a8 // indirect
 	gopkg.in/yaml.v2 v2.2.8 // indirect
 )
