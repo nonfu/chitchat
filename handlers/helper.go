@@ -15,15 +15,12 @@ import (
 )
 
 var logger *log.Logger
-var config *Configuration
 var localizer *i18n.Localizer
 
 func init()  {
-    // 获取全局配置实例
-    config = LoadConfig()
     // 获取本地化实例
-    localizer = i18n.NewLocalizer(config.LocaleBundle, config.App.Language)
-    file, err := os.OpenFile("logs/chitchat.log", os.O_CREATE|os.O_WRONLY|os.O_APPEND, 0666)
+    localizer = i18n.NewLocalizer(ViperConfig.LocaleBundle, ViperConfig.App.Language)
+    file, err := os.OpenFile(ViperConfig.App.Log + "/chitchat.log", os.O_CREATE|os.O_WRONLY|os.O_APPEND, 0666)
     if err != nil {
         log.Fatalln("Failed to open log file", err)
     }
@@ -46,7 +43,7 @@ func session(writer http.ResponseWriter, request *http.Request) (sess models.Ses
 func generateHTML(writer http.ResponseWriter, data interface{}, filenames ...string) {
     var files []string
     for _, file := range filenames {
-        files = append(files, fmt.Sprintf("views/%s/%s.html", config.App.Language, file))
+        files = append(files, fmt.Sprintf("views/%s/%s.html", ViperConfig.App.Language, file))
     }
     funcMap := template.FuncMap{"fdate": formatDate}
     t := template.New("layout").Funcs(funcMap)

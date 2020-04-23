@@ -9,5 +9,6 @@
 - [构建在线论坛项目（七）：通过单例获取全局配置](https://xueyuanjun.com/post/21575)
 - [构建在线论坛项目（八）：消息、视图和日期时间本地化](https://xueyuanjun.com/post/21583)
 - [构建在线论坛项目（九）：部署 Go Web 应用](https://xueyuanjun.com/post/21591)
+- [增补篇：通过 Viper 读取配置文件并实现热加载](https://xueyuanjun.com/post/21601)
 
 > 注：本项目基于 [chitchat](https://github.com/sausheong/gwp/tree/master/Chapter_2_Go_ChitChat/chitchat) 项目做的二次开发，将数据库调整为了 MySQL、路由器调整为了 gorilla/mux、新增了配置文件单例模式获取、本地化编程以及应用部署流程。
